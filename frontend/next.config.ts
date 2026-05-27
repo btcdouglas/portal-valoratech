@@ -1,10 +1,11 @@
 import type { NextConfig } from "next";
+import path from "path";
 
 const nextConfig: NextConfig = {
-  output: "export",
-  trailingSlash: true,
-  images: {
-    unoptimized: true,
+  // Vercel gerencia Next.js nativamente — sem output: 'export'
+  // Isso habilita Server Actions, API Routes e Image Optimization no futuro
+  turbopack: {
+    root: path.resolve(__dirname),
   },
 };
 
