@@ -5,7 +5,7 @@
 **Tecnologia com Propósito e Resultado**
 
 [![Site](https://img.shields.io/badge/site-valoratech.io-0a0a0a?style=flat-square&logo=vercel)](https://www.valoratech.io)
-[![Deploy](https://img.shields.io/badge/deploy-Vercel-0a0a0a?style=flat-square&logo=vercel)](https://vercel.com/imanage-it-projects/portal-valoratech)
+[![Deploy](https://img.shields.io/badge/deploy-Vercel-0a0a0a?style=flat-square&logo=vercel)](https://vercel.com/imanage-it-projects/valoratech)
 [![Next.js](https://img.shields.io/badge/Next.js-16-0a0a0a?style=flat-square&logo=nextdotjs)](https://nextjs.org)
 [![Tailwind CSS](https://img.shields.io/badge/Tailwind-v4-06b6d4?style=flat-square&logo=tailwindcss)](https://tailwindcss.com)
 [![License](https://img.shields.io/badge/license-MIT-6366f1?style=flat-square)](#licença)
