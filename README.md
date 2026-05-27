@@ -38,6 +38,7 @@ Página pública da ValoraTech construída com foco em performance, design vibra
 | [tw-animate-css](https://github.com/Teshgoren/tw-animate-css) | 1.4 | Animações CSS via Tailwind |
 | [Inter](https://fonts.google.com/specimen/Inter) | — | Fonte corpo (Google Fonts) |
 | [Plus Jakarta Sans](https://fonts.google.com/specimen/Plus+Jakarta+Sans) | — | Fonte display/headings (Google Fonts) |
+| [@vercel/analytics](https://vercel.com/docs/analytics) | 2 | Web Analytics (pageviews) |
 
 ## 📁 Estrutura
 

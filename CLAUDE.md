@@ -4,10 +4,10 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Visão Geral
 
-Landing page estática da **ValoraTech** — página "em desenvolvimento" com design vibrante, animações CSS puras e deploy via Cloudflare Pages.
+Landing page da **ValoraTech** — página "em desenvolvimento" com design vibrante, animações CSS puras e deploy contínuo via Vercel.
 
 **Stack:** Next.js 16 · TypeScript · Tailwind CSS v4 · Google Fonts (Inter + Plus Jakarta Sans)  
-**Deploy:** Static export (`output: 'export'`) → Cloudflare Pages
+**Deploy:** Vercel (App Router nativo, sem `output: 'export'`) → [www.valoratech.io](https://www.valoratech.io)
 
 ## Estrutura
 
@@ -15,7 +15,7 @@ Landing page estática da **ValoraTech** — página "em desenvolvimento" com de
 frontend/
 ├── app/
 │   ├── page.tsx       # Página única — todo o conteúdo visual está aqui
-│   ├── layout.tsx     # Fontes Google + metadata (title, description, OG)
+│   ├── layout.tsx     # Fontes Google + metadata (title, description, OG) + Analytics + SpeedInsights
 │   └── globals.css    # Tema, keyframes e classes de animação
 └── public/
     └── icon.svg       # Favicon ValoraTech (letra "V" em fundo preto)
@@ -27,7 +27,7 @@ frontend/
 cd frontend
 npm install
 npm run dev            # http://localhost:3000
-npm run build          # Gera pasta out/ (static export)
+npm run build          # Build de produção (saída em .next/)
 npm run lint
 ```
 
@@ -41,17 +41,24 @@ npm run lint
 | `.badge-shimmer` | Efeito shimmer no badge "Em Desenvolvimento" |
 | `@keyframes float1/2/3` | Blobs de fundo que flutuam continuamente |
 
-## Deploy no Cloudflare Pages
+## Deploy na Vercel
 
-```bash
-npm run build          # Gera frontend/out/
-```
+O projeto usa integração GitHub → Vercel: cada `git push` para `main` dispara um deploy de produção automaticamente.
 
-No painel Cloudflare Pages:
-- **Build command:** `npm run build`
-- **Output directory:** `out`
-- **Root directory:** `frontend`
-- **Node version:** 20
+| Configuração | Valor |
+|---|---|
+| Plataforma | Vercel (iManage IT's Projects) |
+| Domínio | [www.valoratech.io](https://www.valoratech.io) |
+| DNS | Cloudflare (DNS only — sem proxy) |
+| Branch de produção | `main` |
+| Root directory | `frontend/` |
+| Build command | `npm run build` |
+| Node version | 24.x |
+
+## Observabilidade
+
+- **Web Analytics** (`@vercel/analytics`) — coleta pageviews e eventos no painel da Vercel
+- Componente `<Analytics />` em `frontend/app/layout.tsx`
 
 ## Adicionar conteúdo futuro
 
